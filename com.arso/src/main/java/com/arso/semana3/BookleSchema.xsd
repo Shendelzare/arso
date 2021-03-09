@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://www.example.org/actividad"
+xmlns:tns="http://www.example.org/actividad"
+elementFormDefault="qualified">
+
+	
+	<complexType name="Agenda">
+		<sequence>
+			<element name="turno" type="tns:Turno" maxOccurs="unbounded"></element>
+			<element name="fecha" type="date" maxOccurs="1" minOccurs="1"/>
+			
+		</sequence>
+	</complexType>
+		
+	<complexType name="Turno">
+		<sequence>
+			<element name="reserva" type="tns:Reserva" minOccurs="0" maxOccurs="1"/>
+			<element name="horario" type="string" maxOccurs="1" minOccurs="1"/>
+		</sequence>
+	</complexType>
+	
+	
+	<complexType name="Reserva">
+		<sequence>
+			<element name="alumno" type="string" maxOccurs="1" minOccurs="1"/>
+			<element name="email" type="tns:Email" maxOccurs="1" minOccurs="0"/>
+		</sequence>
+	</complexType>
+	
+	<simpleType name="Email">
+		<restriction base="string">
+     	 <pattern value="[^@]+@[^\.]+\..+"/> 
+		</restriction>
+	</simpleType>
+	<complexType name="Actividad">
+			<sequence>
+				<element name ="agenda" type="tns:Agenda" maxOccurs="unbounded"/>
+				<element name="id" type="string" maxOccurs="1" minOccurs="1"/>
+				<element name="titulo" type="string" maxOccurs="1" minOccurs="1"/>
+				<element name="descripcion" type="string" maxOccurs="1" minOccurs="0"/>
+				<element name="profesor" type="string" maxOccurs="1" minOccurs="1"/>
+				<element name="email" type="tns:Email" maxOccurs="1" minOccurs="0"/>
+			
+			</sequence>
+			
+		</complexType>
+			
+	<element name ="Actividad" type="tns:Actividad" ></element>
+
+</schema>
