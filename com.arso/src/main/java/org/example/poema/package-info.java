@@ -5,5 +5,5 @@
 // Generado el: 2021.03.17 a las 11:56:47 PM CET 
 //
 
-@javax.xml.bind.annotation.XmlSchema(namespace = "http://www.um.es/acta", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
-package es.um.acta;
+@javax.xml.bind.annotation.XmlSchema(namespace = "http://www.example.org/poema", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
+package org.example.poema;

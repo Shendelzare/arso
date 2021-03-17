@@ -6,7 +6,7 @@
 //
 
 
-package es.um.acta;
+package org.example.poema;
 
 import javax.xml.bind.annotation.XmlRegistry;
 
@@ -14,7 +14,7 @@ import javax.xml.bind.annotation.XmlRegistry;
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
- * generated in the es.um.acta package. 
+ * generated in the org.example.poema package. 
  * <p>An ObjectFactory allows you to programatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
@@ -30,34 +30,18 @@ public class ObjectFactory {
 
 
     /**
-     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: es.um.acta
+     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: org.example.poema
      * 
      */
     public ObjectFactory() {
     }
 
     /**
-     * Create an instance of {@link Acta }
+     * Create an instance of {@link Poema }
      * 
      */
-    public Acta createActa() {
-        return new Acta();
-    }
-
-    /**
-     * Create an instance of {@link TipoCalificacion }
-     * 
-     */
-    public TipoCalificacion createTipoCalificacion() {
-        return new TipoCalificacion();
-    }
-
-    /**
-     * Create an instance of {@link TipoDiligencia }
-     * 
-     */
-    public TipoDiligencia createTipoDiligencia() {
-        return new TipoDiligencia();
+    public Poema createPoema() {
+        return new Poema();
     }
 
 }
