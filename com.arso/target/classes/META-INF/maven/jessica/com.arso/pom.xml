@@ -1,7 +1,47 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>jessica</groupId>
-  <artifactId>com.arso</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>ARSO</name>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>jessica</groupId>
+	<artifactId>com.arso</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>ARSO</name>
+
+	<dependencies>
+		<dependency>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
+			<version>2.3.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jaxb</groupId>
+			<artifactId>jaxb-runtime</artifactId>
+			<version>2.3.1</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<pluginManagement></pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.jvnet.jaxb2.maven2</groupId>
+				<artifactId>maven-jaxb2-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>generate</id>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+					</execution>
+				</executions>
+					<configuration>
+					<generateDirectory>src/main/java</generateDirectory>
+					<schemaDirectory>src/main/resources/xml</schemaDirectory>
+					<schemaIncludes>
+						<include>*.xsd</include>
+					</schemaIncludes>
+				</configuration>
+				
+			</plugin>
+		</plugins>
+	</build>
 </project>

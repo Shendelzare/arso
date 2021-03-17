@@ -2,9 +2,9 @@
 
 <!ELEMENT acta (calificacion+,diligencia*)>
 <!ELEMENT calificacion (nif,nombre?,nota)>
-<!ELEMENT #REQUIRED nif (#PCDATA)>
-<!ELEMENT #IMPLIED nombre (#PCDATA)>
-<!ELEMENT #REQUIRED nota (#PCDATA)>
+<!ELEMENT nif (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT nota (#PCDATA)>
 <!ELEMENT diligencia (nif, nombre?, nota)>
 
 <!ATTLIST acta
